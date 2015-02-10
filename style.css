@@ -1,0 +1,67 @@
+body {
+	background: #111;
+	color: #ddd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	font-family: "Helvetica";
+	font-size: 2.7em;
+	padding: 2em;
+	line-height: 1.5em;
+}
+
+section.effect {
+    display: block;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-name: fadeInFromNone;
+    -webkit-animation-iteration-count: infinite;
+}
+
+section.initialEffect {
+	display: block;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-name: initialAnimation;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display:none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block ; 
+        opacity: 0;
+    }
+
+    50% {
+        display: block ; 
+        opacity: 1;
+    }
+
+    100% {
+        display: block ; 
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes initialAnimation {
+    0% {
+        display:block;
+        opacity: 1;
+    }
+
+    50% {
+    	display:block;
+        opacity: 1;
+    }
+
+    100% {
+        display: block ; 
+        opacity: 0;
+    }
+}
